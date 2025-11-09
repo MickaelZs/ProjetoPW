@@ -1,0 +1,124 @@
+/* ===== VARIÁVEIS ===== */
+:root {
+  --preto: #121712;
+  --verde-sec: #618A70;
+  --verde-principal: #12ED5C;
+  --cinza-claro: #F0F5F2;
+  --cinza-medio: #E5E8EB;
+  --branco: #FFFFFF;
+}
+
+/* ===== BASE ===== */
+body {
+  background-color: var(--cinza-claro);
+  font-family: "Manrope", sans-serif;
+  color: var(--preto);
+  margin: 0;
+  padding-top: fixed; /* Compensa header fixo */
+}
+
+/* ===== CONTAINER DO PRODUTO ===== */
+.produto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ===== CARD ===== */
+.produto-card {
+  display: flex;
+  gap: 60px;
+  background: var(--branco);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== IMAGEM ===== */
+.produto-imagem img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--cinza-medio);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== INFO ===== */
+.produto-info {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.produto-info h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.produto-info p {
+  font-size: 1rem;
+  color: var(--verde-sec);
+  margin-bottom: 10px;
+}
+
+.produto-preco {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--preto);
+  margin: 20px 0;
+}
+
+/* ===== BOTÕES ===== */
+.produto-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-verde {
+  background: var(--verde-principal);
+  color: var(--preto);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-verde:hover {
+  background: #10d856;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: none;
+  border: 2px solid var(--verde-sec);
+  color: var(--verde-sec);
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--verde-sec);
+  color: var(--branco);
+  transform: translateY(-2px);
+}
+
+

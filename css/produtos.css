@@ -1,0 +1,133 @@
+/* ===== VARIÁVEIS ===== */
+:root {
+  --preto: #121712;
+  --verde-sec: #618A70;
+  --verde-principal: #12ED5C;
+  --cinza-claro: #F0F5F2;
+  --cinza-medio: #E5E8EB;
+  --branco: #FFFFFF;
+}
+
+/* ===== BASE ===== */
+body {
+  background-color: var(--cinza-claro);
+  font-family: "Manrope", sans-serif;
+  color: var(--preto);
+  margin: 0;
+  padding-top: fixed; /* Compensa o header fixo */
+}
+
+/* ===== TÍTULO DO CATÁLOGO ===== */
+.titulo {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.titulo p {
+  font-size: 1rem;
+  color: var(--verde-sec);
+}
+
+/* ===== GRID DE PRODUTOS ===== */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 40px 80px;
+  justify-items: center;
+}
+
+/* ===== CARD DO PRODUTO ===== */
+.produto-card {
+  background: var(--branco);
+  border: 1px solid var(--cinza-medio);
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--cinza-medio);
+}
+
+.produto-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 15px 15px 8px;
+}
+
+.produto-card p {
+  font-size: 0.9rem;
+  color: var(--verde-sec);
+  margin: 0 15px 20px;
+  height: 40px;
+}
+
+/* ===== BOTÃO ===== */
+.btn-detalhes {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 0 auto 20px;
+  background: var(--verde-principal);
+  color: var(--preto);
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-detalhes:hover {
+  background: #10d856;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 1.6rem;
+  }
+
+  .produtos-grid {
+    gap: 20px;
+    padding: 0 20px 60px;
+  }
+
+  .produto-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 1.4rem;
+  }
+
+  .produto-card {
+    max-width: 100%;
+  }
+
+  .produto-card img {
+    height: 160px;
+  }
+}

@@ -1,0 +1,159 @@
+/* ===== BASE ===== */
+:root {
+  --preto: #121712;
+  --verde-sec: #618A70;
+  --verde-principal: #12ED5C;
+  --cinza-claro: #F0F5F2;
+  --cinza-medio: #E5E8EB;
+  --branco: #FFFFFF;
+}
+
+body {
+  background: var(--cinza-claro);
+  font-family: "Manrope", sans-serif;
+  color: var(--preto);
+  margin: 0;
+  padding-top: fixed; /* pra compensar o header fixo */
+}
+
+/* ===== CONTAINER ===== */
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+}
+
+.cadastro-box {
+  background: var(--branco);
+  padding: 50px 60px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+.cadastro-box h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--verde-sec);
+  margin-bottom: 40px;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--preto);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--cinza-medio);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background-color: var(--cinza-claro);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--verde-sec);
+  background-color: var(--branco);
+}
+
+/* ===== CHECKBOX ===== */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+.form-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--verde-principal);
+  cursor: pointer;
+}
+
+.form-check label a {
+  color: var(--verde-sec);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.form-check label a:hover {
+  color: var(--verde-principal);
+}
+
+/* ===== BOTÃO ===== */
+.btn-cadastrar {
+  width: 100%;
+  background: var(--verde-principal);
+  color: var(--preto);
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cadastrar:hover {
+  background: #10d856;
+  transform: translateY(-2px);
+}
+
+/* ===== LINK DE LOGIN ===== */
+.login-link {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: var(--preto);
+}
+
+.login-link a {
+  color: var(--verde-sec);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: var(--verde-principal);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 480px) {
+  .cadastro-box {
+    padding: 40px 30px;
+  }
+
+  .cadastro-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}
