@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  const cartCountEl = document.getElementById('cart-count');
+
+  if (cartCountEl) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
+    cartCountEl.textContent = totalItens;
+  }
+
   const avatarDiv = document.getElementById("avatar");
+
 
   // Garante que o header e o avatar existem
   if (!avatarDiv) return;
@@ -36,4 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.reload();
     });
   }
+
+ 
 });

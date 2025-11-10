@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorUp - Carrinho</title>
+
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/carrinho.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body class="font-manrope bg-white overflow-x-hidden">
+    <div class="layout-container flex flex-col min-h-screen">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header-inner">
+                <div class="brand">
+                    <span class="dot">✦</span>
+                    <span class="name">ColorUp</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="#">Ofertas</a>
+                </nav>
+
+                <div class="actions">
+                    <div class="search-box">
+                        <i class="search-icon"></i>
+                        <input type="text" placeholder="Buscar..." />
+                    </div>
+                    <a href="carrinho.html" class="cart-icon">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+
+                    <div class="avatar" id="avatar"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO -->
+        <!-- CONTEÚDO -->
+        <main class="main-content">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <span>Carrinho</span>
+            </div>
+
+            <h1 class="page-title">Seu Carrinho</h1>
+
+            <!-- LISTA DE ITENS DO CARRINHO (dinâmica) -->
+            <div class="carrinho-container">
+                <!-- Os produtos serão inseridos via JS -->
+            </div>
+
+            <!-- RESUMO -->
+            <section class="summary">
+                <h3>Resumo do Pedido</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Frete</span>
+                    <span>Grátis</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">R$ 0,00</span>
+                </div>
+                <button id="finalizar-compra" class="checkout-btn">
+                    Finalizar Compra
+                </button>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- SCRIPT DO CARRINHO -->
+    <script src="js/carrinho.js"></script>
+</body>
+
+</html>

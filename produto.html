@@ -12,23 +12,38 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="dot">✦</span>
-        <span class="name">ColorUp</span>
-      </div>
+            <div class="container header-inner">
+                <div class="brand">
+                    <span class="dot">✦</span>
+                    <span class="name">ColorUp</span>
+                </div>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="#">Ofertas</a>
-      </nav>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="#">Ofertas</a>
+                </nav>
 
-      <div class="actions">
-        <div class="avatar" id="avatar"></div>
-      </div>
-    </div>
-  </header>
+                <div class="actions">
+                    <div class="search-box">
+                        <i class="search-icon"></i>
+                        <input type="text" placeholder="Buscar..." />
+                    </div>
+                    <a href="carrinho.html" class="cart-icon">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+
+                    <div class="avatar" id="avatar"></div>
+                </div>
+            </div>
+        </header>
 
   <!-- PRODUTO -->
   <main class="produto-container">

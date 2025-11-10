@@ -1,0 +1,119 @@
+body {
+  font-family: 'Manrope', 'Noto Sans', sans-serif;
+}
+
+/* CONTEÚDO */
+.main-content {
+  padding: 20px 160px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  color: #61896f;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111813;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background: #fff;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.item-info {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  border: solid 1px;
+}
+
+
+
+.item-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-title {
+  font-weight: 500;
+  color: #111813;
+}
+
+.item-subtext {
+  color: #61896f;
+  font-size: 14px;
+}
+
+.item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-qty button {
+  width: 28px;
+  height: 28px;
+  background: #f0f4f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.item-qty input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+.summary {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.summary h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111813;
+  margin-bottom: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  color: #61896f;
+  padding: 6px 0;
+}
+
+.summary-row span:last-child {
+  color: #111813;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 16px;
+  background: #13ec5b;
+  color: #111813;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+

@@ -46,7 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert("Produto adicionado ao carrinho! 🛒");
+
+    const cartCountEl = document.getElementById('cart-count');
+    if (cartCountEl) {
+      const totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
+      cartCountEl.textContent = totalItens;
+    }
   });
 
   // ===== FUNÇÃO: COMPRAR AGORA =====
@@ -63,4 +68,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.location.href = "carrinho.html";
   });
+
 });
