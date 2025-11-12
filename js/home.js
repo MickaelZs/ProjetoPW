@@ -10,6 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarContadorCarrinho();
 }
 
+  
+  const categoriaCards = document.querySelectorAll(".categoria-card");
+
+  categoriaCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const categoria = card.getAttribute("data-categoria");
+      localStorage.setItem("categoriaSelecionada", categoria);
+      window.location.href = "categoria.html";
+    });
+  });
+
+
+
+
 
   // Se o usuário não estiver logado:
   if (!logado) {
@@ -27,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   atualizarContadorCarrinho();
+  abrirCategoria(); 
 });
 
  // Impede que o usuario veja o botao de sair na tela de login e cadastro

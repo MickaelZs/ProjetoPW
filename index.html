@@ -13,6 +13,8 @@
   <script src="js/home.js"></script>
   <script src="js/global.js"></script>
   <script src="js/produtos.js"></script>
+  <script src="js/produto.js"></script>
+  <script src="js/categoria.js"></script>
 
   <!-- HEADER -->
    <header class="header">
@@ -65,7 +67,7 @@
        <div class="product-card">
       <img src="assets/produtos/tinta1.jpg" alt="Tinta Acrílica Premium - 3,6L">
       <h3>Tinta Acrílica Premium - 3,6L</h3>
-      <p>R$ 129,90</p>
+      <p class="produto-preco">R$ <span id="produto-preco">0,00</span></p>
     </div>
     </a>
    
@@ -73,7 +75,7 @@
        <div class="product-card">
       <img src="assets/produtos/tinta2.jpg" alt="Tinta Esmalte Sintético - 900ml">
       <h3>Tinta Esmalte Sintético - 900ml</h3>
-      <p>R$ 79,90</p>
+      <p class="produto-preco">R$ <span id="produto-preco">0,00</span></p>
     </div>
     </a>
    
@@ -82,7 +84,7 @@
       <div class="product-card">
       <img src="assets/produtos/tinta3.jpg" alt="Tinta Látex Lavável - 18L">
       <h3>Tinta Látex Lavável - 18L</h3>
-      <p>R$ 189,90</p>
+      <p class="produto-preco">R$ <span id="produto-preco">0,00</span></p>
     </div>
     </a>
     
@@ -91,7 +93,7 @@
        <div class="product-card">
       <img src="assets/produtos/tinta4.jpg" alt="Tinta Epóxi Premium - 3,6L">
       <h3>Tinta Epóxi Premium - 3,6L</h3>
-      <p>R$ 159,90</p>
+      <p class="produto-preco">R$ <span id="produto-preco">0,00</span></p>
     </div>
     </a>
    
@@ -102,28 +104,32 @@
   <h2>Categorias</h2>
 
   <div class="categorias-grid">
-    <div class="categoria-card">
+    <a data-categoria="Tintas para Interior" href="/categoria.html">
+      <div class="categoria-card" data-categoria="Tintas para Interior">
       <img src="assets/produtos/interior.jpg" alt="Tintas para Interior">
       <div class="categoria-info">
         <p>Tintas para Interior</p>
       </div>
     </div>
 
-    <div class="categoria-card">
+    </a>
+    
+
+    <div class="categoria-card" data-categoria="Tintas para Exterior">
       <img src="assets/produtos/exterior.jpg" alt="Tintas para Exterior">
       <div class="categoria-info">
         <p>Tintas para Exterior</p>
       </div>
     </div>
 
-    <div class="categoria-card">
+    <div class="categoria-card" data-categoria="Tintas Especiais">
       <img src="assets/produtos/especiais.jpg" alt="Tintas Especiais">
       <div class="categoria-info">
         <p>Tintas Especiais</p>
       </div>
     </div>
 
-    <div class="categoria-card">
+    <div class="categoria-card" data-categoria="Acessórios de Pintura">
       <img src="assets/produtos/acessorios.jpg" alt="Acessórios de Pintura">
       <div class="categoria-info">
         <p>Acessórios de Pintura</p>
