@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const userData = JSON.parse(localStorage.getItem("user"));
   const logado = userData && userData.logado;
 
+  
 
   // Pega todos os botões "Ver detalhes"
   const botoesDetalhes = document.querySelectorAll(".btn-detalhes");
@@ -46,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "login.html";
         return;
       }
+
+      
 
       // Salva o produto clicado no localStorage
       const produtoSelecionado = produtos[index];

@@ -1,5 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  document.addEventListener("DOMContentLoaded", () => {
+  const categoriaBtn = document.getElementById("btn-categorias");
+  
+  if (categoriaBtn) {
+    categoriaBtn.addEventListener("click", () => {
+      const userData = JSON.parse(localStorage.getItem("user"));
+      const logado = userData && userData.logado;
+      
+      if (!logado) {
+        alert("Faça login para acessar as categorias.");
+        window.location.href = "login.html";
+        return;
+      }
+
+      window.location.href = "categoria.html";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const produtosBtn = document.getElementById("btn-produtos");
+  
+  if (produtosBtn) {
+    produtosBtn.addEventListener("click", () => {
+      const userData = JSON.parse(localStorage.getItem("user"));
+      const logado = userData && userData.logado;
+      
+      if (!logado) {
+        alert("Faça login para acessar os produtos.");
+        window.location.href = "login.html";
+        return;
+      }
+
+      window.location.href = "produtos.html";
+    });
+  }
+});
+
+
+
   const cartCountEl = document.getElementById('cart-count');
 
   if (cartCountEl) {

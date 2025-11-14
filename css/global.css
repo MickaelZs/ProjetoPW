@@ -9,6 +9,7 @@
 
 /* ===== RESET ===== */
 * {
+ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,6 +29,7 @@ body {
 
 /* ===== HEADER ===== */
 .header {
+  
   position: sticky;
   top: 0;
   background: var(--branco);
@@ -72,6 +74,7 @@ body {
   display: flex;
   gap: 12px;
   align-items: center;
+ 
 }
 
 .search-box {
@@ -91,13 +94,29 @@ body {
 }
 
 .icon {
+  display: flex;
+  align-items: center;
   border: none;
   background: var(--cinza-claro);
   color: var(--preto);
   border-radius: 8px;
   padding: 6px 2px;
   cursor: pointer;
+
+  
 }
+
+#btn-categorias {
+  cursor: pointer;
+  z-index: 20;
+}
+
+#btn-produtos {
+  cursor: pointer;
+  z-index: 20;
+}
+
+
 
 /* ===== AVATAR ===== */
 .avatar {
@@ -114,7 +133,7 @@ body {
 }
 
 .avatar-logged {
-  background: var(--verde-principal);
+  background: var(--cinza-claro);
   color: var(--preto);
   font-weight: 700;
   font-size: 0.9rem;

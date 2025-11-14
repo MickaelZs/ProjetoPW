@@ -128,21 +128,7 @@
   padding: 0 16px 16px;
 }
 
-/* ===== HEADER FIXO ===== */
-header {
-  position: fixed; /* deixa o header fixo */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--cinza-medio);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  z-index: 1000; /* garante que fique acima dos outros elementos */
-  padding: 12px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 /* ===== CATEGORIAS ===== */
 .categorias {
