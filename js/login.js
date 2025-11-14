@@ -3,34 +3,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evitar reload
+    e.preventDefault();
 
     const nome = document.getElementById("nome").value.trim();
     const senha = document.getElementById("senha").value.trim();
 
-    // Validação básica dos campos
+    // Validação
     if (!nome || !senha) {
       alert("Por favor, preencha todos os campos!");
       return;
     }
 
-    // @micakelzs aqui a gente vai colocar um login pronto ja esse login possivelmente sera do admin
-   
- 
-    // Mas por enquanto a gente só simula o login:   
-    const user = {
-      nome: nome,
-      avatar: gerarAvatar(nome), // gera iniciais do nome
+    // Pega todos os usuários cadastrados
+    const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Procura se existe
+    const usuarioEncontrado = listaUsuarios.find(
+      (u) => u.nome === nome && u.senha === senha
+    );
+
+    // Se não achar → mensagem amigável
+    if (!usuarioEncontrado) {
+      alert("Nenhum usuário encontrado com essas informações. Por favor, cadastre-se.");
+      document.getElementById("nome").value="";
+      document.getElementById("senha").value="";
+      return;
+    }
+  
+    // Se achou → cria a sessão
+    const userSession = {
+      nome: usuarioEncontrado.nome,
+      avatar: gerarAvatar(usuarioEncontrado.nome),
       logado: true
     };
 
-    // Salva a sessão no LocalStorage
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("user", JSON.stringify(userSession));
 
-    // Redireciona pra Home
+    // Redireciona para HOME
     window.location.href = "index.html";
   });
 });
+
 
 // ===== GERA AVATAR COM INICIAIS =====
 function gerarAvatar(nome) {
